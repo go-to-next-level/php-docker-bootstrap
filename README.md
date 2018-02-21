@@ -15,12 +15,12 @@
 
 # 1. Prepare the setup
 ## 1.1. Build the image
-    docker build -t my-php .
+    $ make build
 ## 1.2. Install the composer dependencies
-    docker run -v YOUR_PROJECT_FULLPATH/:/opt/project my-php composer install
+    $ make composer-install
 # 2. Run the tests
 ## 2.1. From command line
-    docker run -v YOUR_PROJECT_FULLPATH/:/opt/project my-php ./vendor/bin/phpunit
+    make test
 ## 2.2. From PHPStorm
 ### 2.2.1. Configure docker
 Follow the instructions according your [operating system](https://blog.jetbrains.com/phpstorm/2015/10/docker-support-in-phpstorm/)
